@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  font-weight: 100;
+
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+body {
+  background-color: rgb(237, 238, 242);
+
+
+}
+
+header {
+
+  color: aliceblue;
+  background-color: rgb(109, 85, 65);
+  padding: 20px;
+
+}
+
+.menu {
+  display: flex;
+  padding: px;
+  font-size: large;
+
+}
+
+a {
+  color: aliceblue;
+  font-size: x-large;
+  margin: 10px;
+
+
+}
+
+#banner {
+  width: 100%;
+  height: 400px;
+
+  background-image: url("../img/tijana-drndarski-JWmNS05a_Hs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: rgb(6, 11, 16);
+
+}
+
+h1 {
+
+  text-align: center;
+  padding: 150px 200px 20px 200px;
+}
+
+p {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+
+}
+
+#foto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around
+  
+}
+
+
+/*.tarjeta {
+    width: 200px;
+    color:rgb(109, 85, 65) ;
+    border: 1px solid rgb(109, 85, 65);
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    
+}*/
+.tarjeta {
+  position: relative;
+  /* Importante */
+  width: 150px;
+  height: 300px;
+  color: rgb(109, 85, 65);
+
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: 300;
+}
+
+.imgb {
+  width: 100%;
+  /* Ajuste */
+  height: auto;
+  /* Ajuste */
+  border-bottom: 5px solid;
+
+}
+
+#dest {
+  background-color: rgb(109, 85, 65);
+  color: aliceblue;
+  margin-bottom: 20px;
+  padding: 30px;
+  font-size: larger;
+}
+
+.cuerpo {
+
+ position: relative;
+  bottom: 0;
+  
+ 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(109, 85, 65);
+
+  box-sizing: border-box;
+  color: white;
+  opacity: 20;
+  /* Inicialmente oculto */
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: small;
+
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    /* Estado inicial */
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Estado intermedio: rebote hacia arriba */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Estado final: regresar a la posición original */
+  }
+}
+#comprar {
+  width: 100%;
+  font-size: medium;
+  text-align:center;
+  position: sticky;
+  bottom: 10px;
+  padding: 10px 35px;
+  background-color: #f1cb95; /* Color de fondo del botón */
+  opacity: 0;
+  color: #fff; /* Color del texto */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+ 
+}
+#comprar:hover{
+opacity: 100%;
+}
+
+
+
+
+
+
+
+#gallery {
+  width: 70%;
+  padding-top: 40px;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  justify-content: space-around
+}
+
+.gallery-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  border-radius: 20px;
+  width: 100%;
+  height: ;
+  display: block;
+}
+
+/* Navegación del Slider */
+.gallery-navigation {
+ 
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 50%;
+  background-color: transparent;
+}
+
+.nav-button {
+  padding: 10px;
+  color:  rgb(109, 85, 65);
+  font-size: 32px; 
+  display: flex;
+  opacity: 100%;
+  background-color: transparent;
+  position: sticky;
+  bottom: 50%;
+  border-color: transparent;
+}
+
+
+/*.nav-button img {
+    
+ 
+   
+    cursor: pointer;
+   
+ }*/
+
+
+@media (min-width: 600px) {
+  .gallery-item {
+    width: 50%;
+  }
+}
+
+@media(max-width: 600px) {
+  #foto {
+    display: flex;
+
+  }
+}
