@@ -45,7 +45,7 @@ a {
 #banner {
   width: 100%;
   height: 400px;
-
+  /* Ajusta la altura según sea necesario */
   background-image: url("../img/tijana-drndarski-JWmNS05a_Hs-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,7 +130,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(89, 65, 109);
+  background-color: rgb(109, 85, 65);
 
   box-sizing: border-box;
   color: white;
@@ -165,7 +165,7 @@ h2 {
   position: sticky;
   bottom: 10px;
   padding: 10px 35px;
-  background-color: #a6f195; /* Color de fondo del botón */
+  background-color: #f1cb95; /* Color de fondo del botón */
   opacity: 0;
   color: #fff; /* Color del texto */
   text-decoration: none;
