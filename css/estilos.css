@@ -20,7 +20,7 @@ body {
 }
 
 header {
-
+  width: 100%;
   color: aliceblue;
   background-color: rgb(109, 85, 65);
   padding: 20px;
@@ -75,7 +75,6 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around
-  
 }
 
 
@@ -123,10 +122,10 @@ h2 {
 
 .cuerpo {
 
- position: relative;
+  position: relative;
   bottom: 0;
-  
- 
+
+
   left: 0;
   width: 100%;
   height: 100%;
@@ -158,23 +157,28 @@ h2 {
     /* Estado final: regresar a la posición original */
   }
 }
+
 #comprar {
   width: 100%;
   font-size: medium;
-  text-align:center;
+  text-align: center;
   position: sticky;
   bottom: 10px;
   padding: 10px 35px;
-  background-color: #f1cb95; /* Color de fondo del botón */
+  background-color: #f1cb95;
+  /* Color de fondo del botón */
   opacity: 0;
-  color: #fff; /* Color del texto */
+  color: #fff;
+  /* Color del texto */
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Transición de color de fondo */
- 
+  transition: background-color 0.3s ease;
+  /* Transición de color de fondo */
+
 }
-#comprar:hover{
-opacity: 100%;
+
+#comprar:hover {
+  opacity: 100%;
 }
 
 
@@ -211,7 +215,7 @@ opacity: 100%;
 
 /* Navegación del Slider */
 .gallery-navigation {
- 
+
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -221,8 +225,8 @@ opacity: 100%;
 
 .nav-button {
   padding: 10px;
-  color:  rgb(109, 85, 65);
-  font-size: 32px; 
+  color: rgb(109, 85, 65);
+  font-size: 32px;
   display: flex;
   opacity: 100%;
   background-color: transparent;
