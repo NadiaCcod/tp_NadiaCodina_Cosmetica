@@ -5,16 +5,22 @@
     font-family: "Montserrat";
     font-weight: 100;
   }
+ 
   header {
     width: 100%;
     color: aliceblue;
     background-color: rgb(109, 85, 65);
     padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
   }
+  
   .menu {
     display: flex;
     padding: px;
     font-size: large;
+  
   }
   
   a {

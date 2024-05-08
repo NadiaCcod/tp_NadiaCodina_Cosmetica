@@ -3,7 +3,7 @@
   padding: 0;
   font-family: Montserrat;
   font-weight: 100;
-
+  box-sizing: border-box;
 }
 
 .contenedor {
@@ -149,7 +149,7 @@ h2 {
 }
 
 #gallery {
-  width: 70%;
+  width: 90%;
   padding-top: 40px;
   margin: auto;
   overflow: hidden;
@@ -204,8 +204,8 @@ h2 {
 
 }
 @media (max-width: 500px) {
-  .gallery-item {
-    width: 50%;
+  #gallery {
+    width: 85%;
   }
 }
 @media(max-width:500px){
