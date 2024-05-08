@@ -87,8 +87,15 @@
     font-size: 16px;
   }
 
-  @media(max-width: 600px) {
+  @media(max-width: 500px) {
     .form-register{
       width: 75%;
     }
   }
+
+  @media (max-width: 500px) {
+    .menu, header{
+      flex-direction: column; 
+     
+    }
+  }    

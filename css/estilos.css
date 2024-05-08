@@ -197,8 +197,9 @@ h2 {
 }
 
 @media (max-width: 500px) {
-.menu{
+.menu, header{
   flex-direction: column; 
+ 
 }
 
 }
