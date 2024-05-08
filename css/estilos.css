@@ -74,29 +74,17 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around
+  justify-content: space-between
+  
 }
 
 
-/*.tarjeta {
-    width: 200px;
-    color:rgb(109, 85, 65) ;
-    border: 1px solid rgb(109, 85, 65);
-    margin-top: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
 
-    
-}*/
 .tarjeta {
   position: relative;
-  /* Importante */
   width: 150px;
   height: 300px;
   color: rgb(109, 85, 65);
-
   margin-top: 10px;
   border-radius: 10px;
   overflow: hidden;
@@ -105,13 +93,27 @@ h2 {
 
 .imgb {
   width: 100%;
-  /* Ajuste */
-  height: auto;
-  /* Ajuste */
+   height: auto;
   border-bottom: 5px solid;
 
 }
 
+.cuerpo {
+
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(109, 85, 65);
+  box-sizing: border-box;
+  color: white;
+  opacity: 20;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: small;
+
+}
 #dest {
   background-color: rgb(109, 85, 65);
   color: aliceblue;
@@ -120,56 +122,19 @@ h2 {
   font-size: larger;
 }
 
-.cuerpo {
 
-  position: relative;
-  bottom: 0;
-
-
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(109, 85, 65);
-
-  box-sizing: border-box;
-  color: white;
-  opacity: 20;
-  /* Inicialmente oculto */
-  transition: opacity 0.3s ease;
-  text-align: center;
-  font-size: small;
-
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-    /* Estado inicial */
-  }
-
-  50% {
-    transform: translateY(-20px);
-    /* Estado intermedio: rebote hacia arriba */
-  }
-
-  100% {
-    transform: translateY(0);
-    /* Estado final: regresar a la posición original */
-  }
-}
 
 #comprar {
   width: 100%;
   font-size: medium;
+  font-weight: 300;
   text-align: center;
   position: sticky;
   bottom: 10px;
-  padding: 10px 35px;
-  background-color: #f1cb95;
-  /* Color de fondo del botón */
+  padding: 10px 30px;
+  background-color: #d2c1aa;
   opacity: 0;
-  color: #fff;
-  /* Color del texto */
+  color:  rgb(200, 138, 86);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -180,12 +145,6 @@ h2 {
 #comprar:hover {
   opacity: 100%;
 }
-
-
-
-
-
-
 
 #gallery {
   width: 70%;
@@ -236,13 +195,7 @@ h2 {
 }
 
 
-/*.nav-button img {
-    
- 
-   
-    cursor: pointer;
-   
- }*/
+
 
 
 @media (max-width: 480px) {
@@ -250,13 +203,43 @@ h2 {
     width: 50%;
   }
 }
+@media(max-width:500px){
+  #comprar {
+    width: 100%;
+    font-size: medium;
+    font-weight: 300;
+    text-align: center;
+    position: sticky;
+    bottom: 10px;
+    padding: 10px 30px;
+    background-color: #f1cb95;
+    opacity: 50%;
+    color:  rgb(109, 85, 65);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Transición de color de fondo */
+  
+  }
+  
+  #comprar:hover {
+    opacity: 100%;
+  }
 
-@media(max-width: 480px) {
-  #foto {
-    flex: 50%;
-    max-width: 50%;
-    justify-content: space-between;
-    
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    /* Estado inicial */
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Estado intermedio: rebote hacia arriba */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Estado final: regresar a la posición original */
   }
 }
-

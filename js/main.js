@@ -85,7 +85,7 @@ for (let producto of data) {
         <h3>${producto.descripcion}</h3>  
         
       </div>  
-      <a id ="comprar" href=${producto.enlase}>Compra</a>
+      <a id ="comprar" href=${producto.enlase}>Comprar</a>
       </div>
     `
     
