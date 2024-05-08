@@ -24,7 +24,7 @@ header {
   color: aliceblue;
   background-color: rgb(109, 85, 65);
   padding: 20px;
-
+  width: 100%;
 }
 
 .menu {
@@ -245,15 +245,18 @@ h2 {
  }*/
 
 
-@media (min-width: 600px) {
+@media (max-width: 480px) {
   .gallery-item {
     width: 50%;
   }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 480px) {
   #foto {
-    display: flex;
-
+    flex: 50%;
+    max-width: 50%;
+    justify-content: space-between;
+    
   }
 }
+
