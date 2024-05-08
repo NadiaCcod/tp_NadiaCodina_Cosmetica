@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-let data = [
+let dataSeccionProd = [
     {
         id: 1,
-        nombre: "Serum Hialuronico",
-        descripcion: "Serum hidratante de acido Hialuronico",
+        nombre: "Serum Hialurónico",
+        descripcion: "Serum de Acido Hialurónico",
         imagen: "img/serum.jpg",
         enlase: "https://inquiet.empretienda.com.ar/productos-faciales/serum-con-acido-hialuronico-pantenol-dy-vitamina-e"
     },
@@ -83,8 +83,10 @@ let data = [
         enlase: "https://inquiet.empretienda.com.ar/productos-faciales/shampoo-solido-de-romero"
     },
 ]
+var elemento = document.getElementById('foto');
+    if (elemento) {
 cad = ``
-for (let producto of data) {
+for (let producto of dataSeccionProd) {
     cad = cad + `
     <div class="tarjeta">
         
@@ -104,7 +106,69 @@ for (let producto of data) {
 document.querySelector("#foto").innerHTML = cad
 let currentIndex = 0;
 
-document.querySelector('.prev-button').addEventListener('click', () => {
+    }
+
+let dataSeccionDest = [
+    {
+        id: 1,
+        nombre: "Serum Hialurónico",
+        descripcion: "Serum de Acido Hialurónico",
+        imagen: "img/serum.jpg",
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/serum-con-acido-hialuronico-pantenol-dy-vitamina-e"
+    },
+    {
+        id: 2,
+        nombre: "Crema",
+        descripcion: "Crema hidratante",
+        imagen: "img/crema.jpg",
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/crema-facial-pieles-secas-o-maduras-con-acido-hialuronico"
+    },
+    {
+        id: 3,
+        nombre: "Manteca corporal",
+        descripcion: "Manteca corporal de Karite",
+        imagen: "img/manteca.jpg",
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/manteca-batida-corporal"
+    },
+    {
+        id: 4,
+        nombre: "Mascarilla Facial",
+        descripcion: "Mascarilla facial solida de Arcilla",
+        imagen: "img/mascarilla.jpg",
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/pack-de-mascarillas-faciales-solidas-de-arcilla"
+    },
+]
+var elemento = document.getElementById('fotoDest');
+if (elemento) {
+
+cad2 = ``
+for (let producto of dataSeccionDest) {
+    cad2 = cad2 + `
+    <div class="tarjeta">
+        
+       <img class= "imgb"
+       src=${producto.imagen} alt=${producto.nombre}>
+       
+      <div class="cuerpo">
+        <h2> ${producto.nombre}</h2>
+        <h3>${producto.descripcion}</h3>  
+        
+      </div>  
+      <a id ="comprar" href=${producto.enlase}>Comprar</a>
+      </div>
+    `
+
+}
+
+document.querySelector("#fotoDest").innerHTML = cad2
+
+
+    }
+
+    var elemento = document.getElementById('gallery');
+    if (elemento) {
+        let currentIndex = 0;
+        document.querySelector('.prev-button').addEventListener('click', () => {
     navigate(-1);
 });
 
@@ -121,3 +185,4 @@ function navigate(direction) {
 
     galleryContainer.style.transform = `translateX(${offset}%)`;
 }
+    }

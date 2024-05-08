@@ -73,7 +73,7 @@ h2 {
 
 }
 
-#foto {
+#foto, #fotoDest {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,13 +85,15 @@ h2 {
 
 .tarjeta {
   position: relative;
-  width: 150px;
-  height: 300px;
+  width: 250px;
+  height: 400px;
   color: rgb(109, 85, 65);
   margin-top: 10px;
   border-radius: 10px;
   overflow: hidden;
   font-weight: 300;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .imgb {
@@ -114,7 +116,7 @@ h2 {
   opacity: 20;
   transition: opacity 0.3s ease;
   text-align: center;
-  font-size: small;
+  font-size: large;
 
 }
 #dest {
@@ -134,7 +136,7 @@ h2 {
   text-align: center;
   position: sticky;
   bottom: 10px;
-  padding: 10px 30px;
+  padding: 10px 80px;
   background-color: #d2c1aa;
   opacity: 25%;
   color:  rgb(200, 138, 86);
@@ -256,12 +258,29 @@ h2 {
     background-color: rgb(109, 85, 65);
     font-family: 'Montserrat';
     text-align: center;
-    padding: px;
-    margin-bottom: 20px;
+    padding:20 px;
+    
     font-size: 28.8px;
     font-weight: 100;
     margin-top:20px;
 }
 a{
   text-decoration: none;
+}
+
+
+@media (max-width: 500px){
+ .tarjeta{
+  height: 300px;
+  width: 150px;
+font-size: small;
+margin-left: 0;
+  margin-bottom: 10px;}
+  
+}
+
+@media (max-width: 500px){
+  .cuerpo{
+    font-size: small;
+  }
 }
