@@ -8,16 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
 <a href="./registro.html">Registro</a>
 </nav>
 `;
-    document.querySelector("#banner").innerHTML = `
-<h1>Inquiet</h1>
-<h2>Cosmetica natural y conciente</h2>
+
+
+
+ 
+
+    document.querySelector("footer").innerHTML= `
+
+    <p>Nuestras redes sociales</p>
+ <nav>
+    <a href="https://inquiet.empretienda.com.ar/">
+        <img width="36" src="img/instagram.png" alt="">
+    </a>
+    <a href="https://www.whatsapp.com">
+        <img width="36" src="img/whatsapp.png" alt="">
+    </a>
+    <a href="https://www.facebook.com">
+        <img width="36" src="img/facebook.png" alt="">
+    </a>  
+</nav>
 `;
 
-
-    document.querySelector("#destacados").innerHTML = `
-<h2>Destacados</h2>
-
-`;
 });
 
 let data = [
@@ -26,35 +37,35 @@ let data = [
         nombre: "Serum Hialuronico",
         descripcion: "Serum hidratante de acido Hialuronico",
         imagen: "img/serum.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/serum-con-acido-hialuronico-pantenol-dy-vitamina-e"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/serum-con-acido-hialuronico-pantenol-dy-vitamina-e"
     },
     {
         id: 2,
         nombre: "Crema",
         descripcion: "Crema hidratante",
         imagen: "img/crema.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/crema-facial-pieles-secas-o-maduras-con-acido-hialuronico"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/crema-facial-pieles-secas-o-maduras-con-acido-hialuronico"
     },
     {
         id: 3,
         nombre: "Manteca corporal",
         descripcion: "Manteca corporal de Karite",
         imagen: "img/manteca.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/manteca-batida-corporal"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/manteca-batida-corporal"
     },
     {
         id: 4,
         nombre: "Mascarilla Facial",
         descripcion: "Mascarilla facial solida de Arcilla",
         imagen: "img/mascarilla.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/pack-de-mascarillas-faciales-solidas-de-arcilla"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/pack-de-mascarillas-faciales-solidas-de-arcilla"
     },
     {
         id: 5,
         nombre: "Limpiador facial",
         descripcion: "Limpiador facial solido",
         imagen: "img/limpiador.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/limpiador-facial-solido"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/limpiador-facial-solido"
 
     },
     {
@@ -62,14 +73,14 @@ let data = [
         nombre: "Scrub",
         descripcion: "Scrub corporal",
         imagen: "img/scrub.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/scrub-corporal"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/scrub-corporal"
     },
     {
         id: 7,
         nombre: "Shampoo solido",
         descripcion: "Shampoo solido todo tipo de cabello",
         imagen: "img/shampoo.jpg",
-        enlase:"https://inquiet.empretienda.com.ar/productos-faciales/shampoo-solido-de-romero"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/shampoo-solido-de-romero"
     },
 ]
 cad = ``
@@ -88,25 +99,25 @@ for (let producto of data) {
       <a id ="comprar" href=${producto.enlase}>Comprar</a>
       </div>
     `
-    
+
 }
 document.querySelector("#foto").innerHTML = cad
 let currentIndex = 0;
 
 document.querySelector('.prev-button').addEventListener('click', () => {
-   navigate(-1);
+    navigate(-1);
 });
 
 document.querySelector('.next-button').addEventListener('click', () => {
-   navigate(1);
+    navigate(1);
 });
 
 function navigate(direction) {
-   const galleryContainer = document.querySelector('.gallery-container');
-   const totalImages = document.querySelectorAll('.gallery-item').length;
+    const galleryContainer = document.querySelector('.gallery-container');
+    const totalImages = document.querySelectorAll('.gallery-item').length;
 
-   currentIndex = (currentIndex + direction + totalImages) % totalImages;
-   const offset = -currentIndex * 100;
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    const offset = -currentIndex * 100;
 
-   galleryContainer.style.transform = `translateX(${offset}%)`;
+    galleryContainer.style.transform = `translateX(${offset}%)`;
 }
