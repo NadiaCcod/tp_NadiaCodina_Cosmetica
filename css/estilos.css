@@ -33,7 +33,7 @@ header {
   display: flex;
   padding: px;
   font-size: large;
-  text-decoration:none;
+  text-decoration: none;
 
 }
 
@@ -73,12 +73,12 @@ h2 {
 
 }
 
-#foto, #fotoDest {
+#foto,
+#fotoDest {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around
-
 }
 
 
@@ -98,7 +98,7 @@ h2 {
 
 .imgb {
   width: 100%;
-   height: auto;
+  height: auto;
   border-bottom: 5px solid;
 
 }
@@ -119,6 +119,7 @@ h2 {
   font-size: large;
 
 }
+
 #dest {
   background-color: rgb(109, 85, 65);
   color: aliceblue;
@@ -138,18 +139,20 @@ h2 {
   bottom: 10px;
   padding: 10px 80px;
   background-color: #d2c1aa;
-  opacity: 25%;
-  color:  rgb(200, 138, 86);
+  opacity: 0%;
+  color: rgb(200, 138, 86);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   /* Transición de color de fondo */
 
 }
-
-#comprar:hover {
+.tarjeta:hover #comprar {
   opacity: 100%;
 }
+/*#comprar:hover {
+  opacity: 100%;
+}*/
 
 #gallery {
   width: 90%;
@@ -200,18 +203,22 @@ h2 {
 }
 
 @media (max-width: 500px) {
-.menu, header{
-  flex-direction: column; 
- 
-}
+
+  .menu,
+  header {
+    flex-direction: column;
+
+  }
 
 }
+
 @media (max-width: 500px) {
   #gallery {
     width: 85%;
   }
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
   #comprar {
     width: 100%;
     font-size: medium;
@@ -222,19 +229,20 @@ h2 {
     padding: 10px 30px;
     background-color: #f1cb95;
     opacity: 50%;
-    color:  rgb(109, 85, 65);
+    color: rgb(109, 85, 65);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     /* Transición de color de fondo */
-  
+
   }
-  
+
   #comprar:hover {
     opacity: 100%;
   }
 
 }
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -253,34 +261,36 @@ h2 {
 }
 
 
-  footer {
-    color: aliceblue;
-    background-color: rgb(109, 85, 65);
-    font-family: 'Montserrat';
-    text-align: center;
-    padding:20 px;
-    
-    font-size: 28.8px;
-    font-weight: 100;
-    margin-top:20px;
+footer {
+  color: aliceblue;
+  background-color: rgb(109, 85, 65);
+  font-family: 'Montserrat';
+  text-align: center;
+  padding: 20 px;
+
+  font-size: 28.8px;
+  font-weight: 100;
+  margin-top: 20px;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
 
-@media (max-width: 500px){
- .tarjeta{
-  height: 300px;
-  width: 150px;
-font-size: small;
-margin-left: 0;
-  margin-bottom: 10px;}
-  
+@media (max-width: 500px) {
+  .tarjeta {
+    height: 300px;
+    width: 150px;
+    font-size: x-small;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
 }
 
-@media (max-width: 500px){
-  .cuerpo{
+@media (max-width: 500px) {
+  .cuerpo {
     font-size: small;
   }
 }

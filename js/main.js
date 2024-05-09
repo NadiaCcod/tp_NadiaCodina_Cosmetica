@@ -82,6 +82,21 @@ let dataSeccionProd = [
         imagen: "img/shampoo.jpg",
         enlase: "https://inquiet.empretienda.com.ar/productos-faciales/shampoo-solido-de-romero"
     },
+    {
+    id: 8,
+        nombre: "Kit Serum y Crema Facial",
+        descripcion: "Serum y crema con Acido Hialuronico",
+        imagen: "img/kitSerumCrema.jpg",
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico"
+},
+
+{
+    id: 9,
+        nombre: "Kit Serum, Crema Facial y Limpiador",
+        descripcion: "Serum y crema con Acido Hialuronico y limpiador facial",
+        imagen: "img/kitCompleto.JPEG",
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico"
+},
 ]
 var elemento = document.getElementById('foto');
     if (elemento) {
