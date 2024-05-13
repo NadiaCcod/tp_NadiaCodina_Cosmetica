@@ -202,6 +202,57 @@ h2 {
   border-color: transparent;
 }
 
+
+.sobreNosotros #SN {
+  background-color: #AC9D88;
+  color: aliceblue;
+
+  padding: 30px;
+  font-size: larger;
+
+  width: 100%;
+
+}
+.SNConteiner{
+
+  font-family: Montserrat;
+  font-weight: 100;
+  box-sizing: border-box;
+}
+.sobreNosotros {
+  display: flex;
+  flex-direction: column;
+}
+
+#cuerpoSobreNosotros, #cuerpoSobreNosotros2 {
+   
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#fotosSobreNosotros, #otosSobreNosotros2{
+  width: 100%;
+  height: auto;
+}
+
+#fotoS {
+  width: 100%;
+  height: auto;
+  border-radius: 2%;
+
+}
+
+#textoSobreNosotros {
+  
+  width: 100%;
+  margin: 10px;
+  line-height: 75px;
+  font-size: 22px;
+  padding: 25px;
+  display: block;
+}
+
 @media (max-width: 500px) {
 
   .menu,
@@ -243,22 +294,6 @@ h2 {
 
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-    /* Estado inicial */
-  }
-
-  50% {
-    transform: translateY(-20px);
-    /* Estado intermedio: rebote hacia arriba */
-  }
-
-  100% {
-    transform: translateY(0);
-    /* Estado final: regresar a la posición original */
-  }
-}
 
 
 footer {
@@ -292,5 +327,85 @@ a {
 @media (max-width: 500px) {
   .cuerpo {
     font-size: small;
+  }
+}
+
+@media (max-width: 500px){
+  .SNConteiner{
+    flex-direction:column-reverse ;
+    font-family: Montserrat;
+    font-weight: 100;
+    box-sizing: border-box;
+   
+  }
+}
+
+@media(max-width:500px){
+  #cuerpoSobreNosotros {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 20px;
+  
+  }
+  
+}
+
+@media(max-width:500px){
+  #cuerpoSobreNosotros2 {
+    display: flex;
+    flex-direction:column-reverse ;
+    align-items: center;
+    padding: 20px;
+  }
+  
+}
+
+@media(max-width:500px){
+#textoSobreNosotros {
+  font-weight:
+  width: 100%;
+  margin: 10px;
+  line-height: 35px;
+  font-size: 15px;
+  padding: 25px;
+  display: block;
+  text-align: center;
+ 
+}
+}
+@media(max-width:500px){
+  #fotosSobreNosotros img{
+    content: url("../img/fotoMediaQuerySN.png");
+  }
+}
+@media(max-width:500px){
+  #fotosSobreNosotros2 img{
+    content: url("../img/fotoMediaQuerySN2.png");
+  }
+}
+@media(max-width:500px){
+ #cuerpoSobreNosotros , #cuerpoSobreNosotros2 {
+  padding: 0;
+  
+}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  #cuerpoSobreNosotros2 {
+    display: flex;
+    flex-direction:column-reverse ;
+    align-items: center;
+    padding: 20px;
+    margin-left:  10px;
+  
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  #cuerpoSobreNosotros {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 20px;
   }
 }
