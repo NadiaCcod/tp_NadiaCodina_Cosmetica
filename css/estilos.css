@@ -294,6 +294,46 @@ h2 {
 
 }
 
+/*estilo de carrusel comentarios*/
+#gallery2Coment {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+#gallery-2 {
+  width: 100%;
+  padding-top: 40px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-container-comentarios {
+  transition: transform 0.5s ease-in-out;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+}
+
+.gallery-item-c {
+  margin: 0;
+  display: none;
+  justify-content: center; 
+  align-items: center;
+  width: 75%; 
+  height: auto; 
+  text-align: center; 
+}
+
+.gallery-item-c img {
+  border-radius: 20px;
+  width: 100%; 
+  
+  height: auto; 
+}
 
 
 footer {
