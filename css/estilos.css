@@ -281,7 +281,14 @@ margin-top: 60px;
   .menu,
   header {
     flex-direction: column;
-
+    width: 100%;
+    color: aliceblue;
+    background-color: rgb(109, 85, 65);
+    padding: 6px;
+    width: 100%;
+   position:static;
+   
+ 
   }
 
 }
