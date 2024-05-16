@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("header").innerHTML = `
 <nav class= "menu">
 <a href="./index.html">Home</a>
-<a href="./informacion.html">Sobre nosotr@s</a>
+<a href="./index.html#sobreNosotros">Sobre nosotr@s</a>
 <a href="./productos.html">Productos</a>
 <a href="./registro.html">Registro</a>
 </nav>
