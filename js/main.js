@@ -37,35 +37,40 @@ let dataSeccionProd = [
         nombre: "Serum Hialurónico",
         descripcion: "Serum de Acido Hialurónico",
         imagen: "img/serum.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/serum-con-acido-hialuronico-pantenol-dy-vitamina-e"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/serum-con-acido-hialuronico-pantenol-dy-vitamina-e",
+        tipo:"Facial"
     },
     {
         id: 2,
         nombre: "Crema",
         descripcion: "Crema hidratante",
         imagen: "img/crema.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/crema-facial-pieles-secas-o-maduras-con-acido-hialuronico"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/crema-facial-pieles-secas-o-maduras-con-acido-hialuronico",
+        tipo:"Facial"
     },
     {
         id: 3,
         nombre: "Manteca corporal",
         descripcion: "Manteca corporal de Karite",
         imagen: "img/manteca.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/manteca-batida-corporal"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/manteca-batida-corporal",
+        tipo:"Corporal"
     },
     {
         id: 4,
         nombre: "Mascarilla Facial",
         descripcion: "Mascarilla facial solida de Arcilla",
         imagen: "img/mascarilla.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/pack-de-mascarillas-faciales-solidas-de-arcilla"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/pack-de-mascarillas-faciales-solidas-de-arcilla",
+        tipo:"Facial"
     },
     {
         id: 5,
         nombre: "Limpiador facial",
         descripcion: "Limpiador facial solido",
         imagen: "img/limpiador.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/limpiador-facial-solido"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/limpiador-facial-solido",
+        tipo:"Facial"
 
     },
     {
@@ -73,7 +78,8 @@ let dataSeccionProd = [
         nombre: "Scrub",
         descripcion: "Scrub corporal",
         imagen: "img/scrub.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/scrub-corporal"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/scrub-corporal",
+        tipo:"Corporal"
     },
     {
         id: 7,
@@ -87,7 +93,8 @@ let dataSeccionProd = [
         nombre: "Kit Serum y Crema Facial",
         descripcion: "Serum y crema con Acido Hialuronico",
         imagen: "img/kitSerumCrema.jpg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico",
+        tipo:"Facial"
 },
 
 {
@@ -95,7 +102,8 @@ let dataSeccionProd = [
         nombre: "Kit Serum, Crema Facial y Limpiador",
         descripcion: "Serum y crema con Acido Hialuronico y limpiador facial",
         imagen: "img/kitCompleto.jpeg",
-        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico"
+        enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico",
+        tipo:"facial"
 },
 ]
 var elemento = document.getElementById('foto');
@@ -223,3 +231,31 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000);
 }
+document.getElementById('tipoProducto').addEventListener('change', (event) => {
+    const tipoSeleccionado = event.target.value;
+    mostrarProductos(tipoSeleccionado);
+});
+
+function mostrarProductos(tipo) {
+ const contenedor = document.getElementById('contenedorProductos');
+    contenedor.innerHTML = ''; // Limpiar el contenedor
+
+    const productosFiltrados = tipo === 'Todos' ?  dataSeccionProd  :  dataSeccionProd .filter(producto => producto.tipo === tipo);
+
+    let cad = '';
+    for (let producto of productosFiltrados) {
+        cad += `
+        <div class="tarjeta">
+            <img class="imgb" src="${producto.imagen}" alt="${producto.nombre}">
+            <div class="cuerpo">
+                <h2>${producto.nombre}</h2>
+                <h3>${producto.descripcion}</h3>  
+            </div>  
+            <a id="comprar" href="${producto.enlase}">Comprar</a>
+        </div>
+        `;
+    }
+
+    contenedor.innerHTML = cad;
+}
+mostrarProductos('Todos');//
