@@ -340,7 +340,7 @@ font-weight: 300;
     width: 125%;
     overflow: hidden;
   }
-
+}
   @media (max-width: 500px) {
     .video-banner video {
 
