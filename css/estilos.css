@@ -246,38 +246,33 @@ h2 {
 .sobreNosotros #SN {
   background-color: #AC9D88;
   color: aliceblue;
-  font-weight: 300;
+margin-top: 30px;
   padding: 30px;
   font-size: 50px;
-  margin-top: 60px;
+font-weight: 300;
   width: 100%;
-  margin-bottom: 30px;
 
 }
+.SNConteiner{
 
-.SNConteiner {
-  margin-left: 60px;
-  margin-right: 60px;
   font-family: Montserrat;
   font-weight: 100;
   box-sizing: border-box;
 }
-
 .sobreNosotros {
   display: flex;
   flex-direction: column;
 }
 
-#cuerpoSobreNosotros,
-#cuerpoSobreNosotros2 {
-
+#cuerpoSobreNosotros, #cuerpoSobreNosotros2 {
+  font-weight: 400;
   display: flex;
   align-items: center;
   padding: 20px;
 }
 
-#fotosSobreNosotros,
-#otosSobreNosotros2 {
+
+#fotosSobreNosotros, #otosSobreNosotros2{
   width: 100%;
   height: auto;
 }
@@ -289,12 +284,20 @@ h2 {
 
 }
 
-#textoSobreNosotros h3 {
-  font-weight: 300;
-  color: rgb(109, 85, 65);
-  ;
-  text-indent: 2em;
-  margin-left: 1em;
+#textoSobreNosotros {
+  font-weight: 400;
+  width: 100%;
+  margin: 10px;
+  line-height: 55px;
+  font-size: 25px;
+  padding: 25px;
+  display: block;
+  text-indent: 30px;
+}
+
+#textoSobreNosotros h3{
+  font-weight: 400;
+  color: #8C6249;
 }
 
 #textoSobreNosotros {
@@ -461,94 +464,82 @@ h2 {
     }
   }
 
-  @media (max-width: 500px) {
-    .SNConteiner {
-      flex-direction: column-reverse;
+  @media (max-width: 500px){
+    .SNConteiner{
+      flex-direction:column-reverse ;
       font-family: Montserrat;
       font-weight: 100;
       box-sizing: border-box;
-
+     
     }
   }
-
-  @media(max-width:500px) {
+  
+  @media(max-width:500px){
     #cuerpoSobreNosotros {
       display: flex;
-      flex-direction: column;
+      flex-direction:column;
       align-items: center;
-      padding: 10px;
-
+      padding: 20px;
+    
     }
-
+    
   }
-
-  @media(max-width:500px) {
+  
+  @media(max-width:500px){
     #cuerpoSobreNosotros2 {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction:column-reverse ;
       align-items: center;
-      padding: 10px;
+      padding: 20px;
     }
-
+    
   }
-
-  @media(max-width:500px) {
-    #textoSobreNosotros {
-     
-      width: 100%;
-    padding: 0;
-      line-height: 35px;
-      font-size: 15px;
-     margin: 0;
-      display: block;
-      text-align: center;
-
-    }
+  
+  @media(max-width:500px){
+  #textoSobreNosotros {
+   
+    width: 100%;
+    margin: 10px;
+    line-height: 35px;
+    font-size: 15px;
+    padding: 25px;
+    display: block;
+    text-align: center;
+   
   }
-
-  @media(max-width:500px) {
-    #fotosSobreNosotros img {
+  }
+  @media(max-width:500px){
+    #fotosSobreNosotros img{
       content: url("../img/fotoMediaQuerySN.png");
     }
   }
-
-  @media(max-width:500px) {
-    #fotosSobreNosotros2 img {
+  @media(max-width:500px){
+    #fotosSobreNosotros2 img{
       content: url("../img/fotoMediaQuerySN2.png");
     }
   }
-
-  @media(max-width:500px) {
-
-    #cuerpoSobreNosotros,
-    #cuerpoSobreNosotros2 {
-      padding: 0;
-
-    }
+  @media(max-width:480px){
+   #cuerpoSobreNosotros , #cuerpoSobreNosotros2 {
+    padding: 0;
+    
   }
-
+  }
+  
   @media only screen and (min-width: 480px) and (max-width: 800px) {
     #cuerpoSobreNosotros2 {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction:column-reverse ;
       align-items: center;
       padding: 20px;
-      margin-left: 10px;
-
+      margin-left:  10px;
+    
     }
   }
-
   @media only screen and (min-width: 480px) and (max-width: 800px) {
     #cuerpoSobreNosotros {
       display: flex;
-      flex-direction: column;
+      flex-direction:column;
       align-items: center;
       padding: 20px;
-    }
-  }
-
-  @media(max-width:500px) {
-    #sobreNosotros #SN {
-      font-size: 25px;
     }
   }
