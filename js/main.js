@@ -103,10 +103,18 @@ let dataSeccionProd = [
         descripcion: "Serum y crema con Acido Hialuronico y limpiador facial",
         imagen: "img/kitCompleto.jpeg",
         enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico",
-        tipo:"facial"
+        tipo:"Facial"
+},
+{
+    id: 10,
+    nombre: "Kit Corporal",
+    descripcion: "Scrub y Manteca",
+    imagen: "img/kitCorporal.jpg",
+    enlase: "https://inquiet.empretienda.https://inquiet.empretienda.com.ar/productos-faciales/kit-cuidado-corporal",
+    tipo:"Corporal"
 },
 ]
-var elemento = document.getElementById('foto');
+//var elemento = document.getElementById('foto');
     if (elemento) {
 cad = ``
 for (let producto of dataSeccionProd) {
@@ -192,24 +200,59 @@ document.querySelector("#fotoDest").innerHTML = cad2
     if (elemento) {
         let currentIndex = 0;
         document.querySelector('.prev-button').addEventListener('click', () => {
-    navigate(-1);
-});
-
-document.querySelector('.next-button').addEventListener('click', () => {
-    navigate(1);
-});
-
-function navigate(direction) {
-    const galleryContainer = document.querySelector('.gallery-container');
-    const totalImages = document.querySelectorAll('.gallery-item').length;
-
-    currentIndex = (currentIndex + direction + totalImages) % totalImages;
-    const offset = -currentIndex * 100;
-
-    galleryContainer.style.transform = `translateX(${offset}%)`;
-}
+            navigate(-1);
+        });
+    
+        document.querySelector('.next-button').addEventListener('click', () => {
+            navigate(1);
+        });
+    
+        function navigate(direccion) {
+            currentIndex = currentIndex + direccion;
+    
+            let galleryItems = document.getElementsByClassName("gallery-item");
+    
+            for (let galleryItem of galleryItems) {
+                galleryItem.style.display = "none";
+            }
+    
+            if (currentIndex < 0) { currentIndex = galleryItems.length - 1 }
+            if (currentIndex > galleryItems.length - 1) { currentIndex = 0 }
+    
+            galleryItems[currentIndex].style.display = "block";
+    
+        }
     }
 
+
+    document.getElementById('tipoProducto').addEventListener('change', (event) => {
+        const tipoSeleccionado = event.target.value;
+        mostrarProductos(tipoSeleccionado);
+    });
+    
+    function mostrarProductos(tipo) {
+     const contenedor = document.getElementById('contenedorProductos');
+        contenedor.innerHTML = ''; // Limpiar el contenedor
+    
+        const productosFiltrados = tipo === 'Todos' ?  dataSeccionProd  :  dataSeccionProd .filter(producto => producto.tipo === tipo);
+    
+        var cad2 = '';
+        for (let producto of productosFiltrados) {
+            cad2 = cad2 + `
+            <div class="tarjeta">
+                <img class="imgb" src="${producto.imagen}" alt="${producto.nombre}">
+                <div class="cuerpo">
+                    <h2>${producto.nombre}</h2>
+                    <h3>${producto.descripcion}</h3>  
+                </div>  
+                <a id="comprar" href="${producto.enlase}">Comprar</a>
+            </div>
+            `;
+        }
+    
+        contenedor.innerHTML = cad2;
+    }
+    mostrarProductos('Todos');
 
     //carrusel automatico comentarios
 let slideIndex = 0;
@@ -231,31 +274,9 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000);
 }
+
+
 document.getElementById('tipoProducto').addEventListener('change', (event) => {
     const tipoSeleccionado = event.target.value;
     mostrarProductos(tipoSeleccionado);
 });
-
-function mostrarProductos(tipo) {
- const contenedor = document.getElementById('contenedorProductos');
-    contenedor.innerHTML = ''; // Limpiar el contenedor
-
-    const productosFiltrados = tipo === 'Todos' ?  dataSeccionProd  :  dataSeccionProd .filter(producto => producto.tipo === tipo);
-
-    let cad = '';
-    for (let producto of productosFiltrados) {
-        cad += `
-        <div class="tarjeta">
-            <img class="imgb" src="${producto.imagen}" alt="${producto.nombre}">
-            <div class="cuerpo">
-                <h2>${producto.nombre}</h2>
-                <h3>${producto.descripcion}</h3>  
-            </div>  
-            <a id="comprar" href="${producto.enlase}">Comprar</a>
-        </div>
-        `;
-    }
-
-    contenedor.innerHTML = cad;
-}
-mostrarProductos('Todos');//
