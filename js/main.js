@@ -90,7 +90,7 @@ let dataSeccionProd = [
     },
     {
     id: 8,
-        nombre: "Kit Serum y Crema Facial",
+        nombre: "Kit Facial Duo",
         descripcion: "Serum y crema con Acido Hialuronico",
         imagen: "img/kitSerumCrema.jpg",
         enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico",
@@ -99,8 +99,8 @@ let dataSeccionProd = [
 
 {
     id: 9,
-        nombre: "Kit Serum, Crema Facial y Limpiador",
-        descripcion: "Serum y crema con Acido Hialuronico y limpiador facial",
+        nombre: "Kit Facial Full",
+        descripcion: "Serum, Crema y Limpiador facial",
         imagen: "img/kitCompleto.jpeg",
         enlase: "https://inquiet.empretienda.com.ar/productos-faciales/kit-limpieza-y-serum-de-argan-y-acido-hialuronico",
         tipo:"Facial"
