@@ -48,7 +48,7 @@
   
   .form-register h4 {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   
   .controls {
@@ -56,12 +56,19 @@
     background: rgb(109, 85, 65);
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
-    border: 3px solid gray;
+    margin-top: 20px;
+    border: 3px solid rgb(255, 255, 255);
     font-family: 'Montserrat';
     font-size: 18px;
     color: white;
+    font-weight: 300;
+    
   }
+
+  .controls::placeholder {
+    color: rgba(255, 255, 255, 0.782);
+    font-weight: 100;
+}
   
   .form-register p {
     height: 40px;
@@ -88,10 +95,21 @@
     background: #ffffff;
     border: none;
     padding: 12px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 16px 0;
     font-size: 16px;
   }
+
+   .imputForm{
+  
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+   
+   }
+.botons {
+  font-weight: 400;
+  
+}
 
   @media(max-width: 500px) {
     .form-register{
