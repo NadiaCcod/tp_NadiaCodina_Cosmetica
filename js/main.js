@@ -321,9 +321,10 @@ function validar() {
     return !flagError
 }
 
+function goHome() {
+    window.location.href = 'index.html'
 
-
-
+}
 
 //carrusel automatico comentarios
 let slideIndex = 0;
