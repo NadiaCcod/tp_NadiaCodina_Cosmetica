@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("header").innerHTML = `
 <nav class= "menu">
 <a href="./index.html">Home</a>
-<a href="./index.html#sobreNosotros">Sobre nosotr@s</a>
+<a href="./index.html#sobreNosotrosRef">Sobre nosotr@s</a>
 <a href="./productos.html">Productos</a>
 <a href="./registro.html">Registro</a>
 <a href="./articulo.html">Blog</a>
@@ -259,7 +259,7 @@ if (elemento) {
 const regExpNombre = /^[a-zA-Z]{0,9}$/;
 const regExpApellido = /^[a-zA-Z]{0,9}$/;
 const regExpMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const regExpContraseña = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/;
+const regExpContraseña = /^(?=.*[A-Za-z])(?=.*\d).{9,}$/;
 
 function limpiarErrores() {
     const listaError = document.getElementsByClassName("imputForm")
@@ -283,7 +283,7 @@ function validar() {
         errorElement.textContent = "Ingrese un nombre valido"
         nombre.insertAdjacentElement("afterend", errorElement)
         flagError = true;
-        alert("entro al if error")
+        
     }
 
     if (apellido.value == "" || !regExpApellido.test(apellido.value)) {
@@ -292,7 +292,7 @@ function validar() {
         errorElement.textContent = "Ingrese un apellido valido"
         apellido.insertAdjacentElement('afterend', errorElement);
         flagError = true;
-        alert("segundo if")
+      
     }
     if (mail.value == "" || !regExpMail.test(mail.value)) {
         const errorElement = document.createElement('div');
@@ -300,24 +300,23 @@ function validar() {
         errorElement.textContent = "Ingrese un mail valido"
         mail.insertAdjacentElement('afterend', errorElement);
         flagError = true;
-        alert("tercer if")
+        
     }
 
     if (password.value == "" || !regExpContraseña.test(password.value)) {
         const errorElement = document.createElement('div');
         errorElement.classList.add('imputForm')
-        errorElement.textContent = "Ingrese un mail valido"
+        errorElement.textContent = "La contraseña debe tener numero y letras y un minimo de 8 caracteres"
         password.insertAdjacentElement('afterend', errorElement);
         flagError = true;
-        alert("tercer if")
+      
     }
 
-    alert(flagError)
     if (flagError == false) {
-        alert("entro a la validacion")
+       
 
     }
-    alert("llego al final")
+   
     return !flagError
 }
 

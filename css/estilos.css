@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
 }
 
 body {
@@ -72,6 +73,7 @@ h2 {
   text-align: center;
 
 }
+
 /*tarjetas destacados*/
 #foto,
 #fotoDest {
@@ -224,7 +226,7 @@ h2 {
 .sobreNosotros #SN {
   background-color: #AC9D88;
   color: aliceblue;
-  margin-top: 30px;
+  margin-top: 75px;
   padding: 30px;
   font-size: 50px;
   font-weight: 300;
@@ -600,27 +602,52 @@ a {
 
 
 /* estilo tipos de pieles*/
+
+#tituloPiel {
+  background-color: rgb(221, 222, 217);
+  color: #8C6249;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 300;
+  width: 100%;
+}
+
 #tipoDePieles {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  width: auto;
+  overflow-x: hidden;
 }
 
 .tituloPieles {
   background-color: rgb(221, 222, 217);
   color: #8C6249;
+  margin-top: 20px;
   margin-bottom: 30px;
   padding: 20px;
   font-size: 40px;
   font-weight: 300;
+  width: 100%;
 }
+
+.divPieles {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row;
+}
+
 
 .textoPieles {
   width: 100%;
   margin: 10px;
   line-height: 40px;
-  font-size: 22px;
+  font-size: 30px;
   padding: 25px;
   display: block;
   font-weight: 400;
@@ -635,21 +662,16 @@ a {
   color: #8C6249;
 }
 
-#fotosPieles {
-  width: 100%;
-}
 
-#volverHomeDiv{
-display: flex;
-justify-content: center;
+#volverHomeDiv {
+  display: flex;
+  justify-content: center;
 }
 
 #volverHome {
-  
-  width: 150px;
-  font-size: medium;
+  width: 200pxpx;
+  font-size: 35px;
   font-weight: 300;
-
   text-align: center;
   bottom: 10px;
   margin: auto;
@@ -657,4 +679,51 @@ justify-content: center;
   color: rgb(0, 0, 0);
   text-decoration: none;
   border-radius: 5px;
+}
+
+@media(max-width:500px) {
+  .textoPieles {
+    width: 100%;
+    line-height: 35px;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+
+  }
+
+  #htmlTiposPiel,
+  #bodyTipos {
+    width: 100%;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+  }
+
+  .tituloPieles {
+    display: flex;
+    width: 100%;
+    font-size: 35px;
+
+  }
+}
+
+
+@media(max-width:500px) {
+  #tipoDePieles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  #volverHome {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #tituloPiel{
+    margin-top: 10px;
+  }
 }
