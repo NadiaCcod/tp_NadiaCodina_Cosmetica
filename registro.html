@@ -22,12 +22,17 @@
         <h4>Formulario Registro</h4>
         <form onsubmit="return validar();" >
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" >
+        <div  id="errorNombre"></div>
         <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido"/>
+        <div  id="errorApellido"></div>
         <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"/>
+        <div  id="errorCorreo"></div>
         <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+        <div  id="errorPass"></div>
         <input class="botons" type="submit" value="Registrar">
         
         </form>
+        <div id="result"></div>
       </section>
       <div>
         <img src="" alt="">

@@ -196,9 +196,16 @@ if (elemento) {
 
 }
 
+var galleryItems = [
+  "<img src='img/banner2/1.png' alt='Imagen 1'>",
+  "<img src='img/banner2/2.png' alt='Imagen 2'>",
+  "<img src='img/banner2/3.png' alt='Imagen 3'>",
+  "<img src='img/banner2/4.png' alt='Imagen 3'>"
+]
 var elemento = document.getElementById('gallery');
 if (elemento) {
     let currentIndex = 0;
+    document.querySelector(".gallery-container").innerHTML = galleryItems[currentIndex];
     document.querySelector('.prev-button').addEventListener('click', () => {
         navigate(-1);
     });
@@ -210,16 +217,16 @@ if (elemento) {
     function navigate(direccion) {
         currentIndex = currentIndex + direccion;
 
-        let galleryItems = document.getElementsByClassName("gallery-item");
+       
 
-        for (let galleryItem of galleryItems) {
-            galleryItem.style.display = "none";
-        }
+       // for (let galleryItem of galleryItems) {
+        //    galleryItem.style.display = "none";
+       // }
 
         if (currentIndex < 0) { currentIndex = galleryItems.length - 1 }
         if (currentIndex > galleryItems.length - 1) { currentIndex = 0 }
 
-        galleryItems[currentIndex].style.display = "block";
+       document.querySelector(".gallery-container").innerHTML = galleryItems[currentIndex]
 
     }
 }
@@ -264,10 +271,9 @@ const regExpContraseña = /^(?=.*[A-Za-z])(?=.*\d).{9,}$/;
 function limpiarErrores() {
     const listaError = document.getElementsByClassName("imputForm")
     for (let i = listaError.length - 1; i >= 0; i--) {
-      listaError[i].remove();
+      listaError[i].innerHTML=""
   }
 }
-
 
 function validar() {
   limpiarErrores()
@@ -278,36 +284,33 @@ function validar() {
     const password = document.getElementById('password');
 
     if (nombre.value == "" || !regExpNombre.test(nombre.value)) {
-        const errorElement = document.createElement('div');
-        errorElement.classList.add('imputForm')
-        errorElement.textContent = "Ingrese un nombre valido"
-        nombre.insertAdjacentElement("afterend", errorElement)
+        const errorNombre = document.getElementById("errorNombre")
+        errorNombre.classList.add('imputForm')
+        errorNombre.innerHTML = "Ingrese un nombre valido"
         flagError = true;
-        
     }
 
     if (apellido.value == "" || !regExpApellido.test(apellido.value)) {
-        const errorElement = document.createElement('div');
-        errorElement.classList.add('imputForm')
-        errorElement.textContent = "Ingrese un apellido valido"
-        apellido.insertAdjacentElement('afterend', errorElement);
+        const errorApellido = document.getElementById('errorApellido');
+        errorApellido.classList.add('imputForm')
+        errorApellido.innerHTML = "Ingrese un apellido valido"
+       
         flagError = true;
       
     }
     if (mail.value == "" || !regExpMail.test(mail.value)) {
-        const errorElement = document.createElement('div');
-        errorElement.classList.add('imputForm')
-        errorElement.textContent = "Ingrese un mail valido"
-        mail.insertAdjacentElement('afterend', errorElement);
+        const errorCorreo = document.getElementById('errorCorreo');
+        errorCorreo.classList.add('imputForm')
+        errorCorreo.innerHTML = "Ingrese un mail valido"
         flagError = true;
         
     }
 
     if (password.value == "" || !regExpContraseña.test(password.value)) {
-        const errorElement = document.createElement('div');
-        errorElement.classList.add('imputForm')
-        errorElement.textContent = "La contraseña debe tener numero y letras y un minimo de 8 caracteres"
-        password.insertAdjacentElement('afterend', errorElement);
+        const errorPass = document.getElementById('errorPass');
+       errorPass.classList.add('imputForm')
+       errorPass.innerHTML = "La contraseña debe tener numero y letras y un minimo de 8 caracteres"
+    
         flagError = true;
       
     }
@@ -316,8 +319,28 @@ function validar() {
        
 
     }
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = ''; // Limpiar contenido anterior
+    if (!flagError) {
+     
+
+        const datos = [
+            { label: 'Nombre', value: nombre.value },
+            { label: 'Apellido', value: apellido.value },
+            { label: 'Correo', value: mail.value },
+            { label: 'Contraseña', value: password.value }
+        ];
+
+        datos.forEach(dato => {
+            const p = document.createElement('p');
+            p.textContent = `${dato.label}: ${dato.value}`;
+            resultDiv.appendChild(p);
+        });
+    }
    
-    return !flagError
+    return false
+   
+    
 }
 
 function goHome() {
@@ -348,8 +371,9 @@ function showSlides() {
 
 
 document.getElementById('tipoProducto').addEventListener('change', (event) => {
-    const tipoSeleccionado = event.target.value;
-    mostrarProductos(tipoSeleccionado);
+    
+  const tipoSeleccionado = event.target.value;
+   mostrarProductos(tipoSeleccionado);
 });
 
 
