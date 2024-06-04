@@ -337,6 +337,12 @@ function validar() {
             resultDiv.appendChild(p);
         });
     }
+    nombre.value="";
+    apellido.value="";
+    mail.value="";
+    password.value="";
+    
+   
    
     return false
    
